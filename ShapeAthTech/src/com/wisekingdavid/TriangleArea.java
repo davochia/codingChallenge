@@ -9,11 +9,6 @@ public class TriangleArea implements Shape {
 
     @Override
     public double getArea() {
-        return triangle.getArea();
-    }
-
-    @Override
-    public String getName() {
-        return triangle.getName();
+        return triangle.calculateArea();
     }
 }

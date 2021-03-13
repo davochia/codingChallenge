@@ -10,12 +10,12 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Starting phonebook application...");
 
-        boolean flag = true;
+        boolean quit = false;
         int option = 0;
 
         printOptions();
 
-        while (flag){
+        while (!quit){
 
             System.out.print("Enter option from list: \n" );
             option = sc.nextShort();
@@ -23,7 +23,8 @@ public class Main {
 
             switch (option){
                 case 0:
-                    printOptions();
+                    System.out.println("Closing application...");
+                    quit = true;
                     break;
 
                 case 1:
@@ -53,7 +54,7 @@ public class Main {
                     break;
 
                 case 7:
-                    flag = false;
+                    printOptions();
                     break;
             }
         }
@@ -86,7 +87,6 @@ public class Main {
         else {
             phoneBook.deleteContactList(contactFound);
             System.out.println(nameToDelete + " deleted");
-
         }
 
     }
@@ -99,7 +99,7 @@ public class Main {
 
         if (contactFound == null){
             System.out.println(nameToEdit + " not found");
-            return;
+            return ;
         }
 
         System.out.println("Enter new full name: ");
@@ -113,7 +113,7 @@ public class Main {
         if (phoneBook.editContactList(contactFound, newContact)){
             System.out.println(nameToEdit + " updated successfully. New Name: " + newName + " Phone: " + newPhoneNumber);
         }else {
-            System.out.println("Error encountered");
+            System.out.println("Action not completed...");
         }
 
     }
@@ -136,14 +136,14 @@ public class Main {
     }
 
     private static void printOptions() {
-        System.out.println("Enter #0 to print option...");
+        System.out.println("Enter #0 to quit application...");
         System.out.println("Enter #1 to print contacts...");
         System.out.println("Enter #2 to add contacts...");
         System.out.println("Enter #3 to delete contact...");
         System.out.println("Enter #4 to edit contact...");
         System.out.println("Enter #5 to search contact...");
         System.out.println("Enter #6 to merge contact...");
-        System.out.println("Enter #7 to quit application...");
+        System.out.println("Enter #7 to print option...");
         System.out.println();
     }
 }

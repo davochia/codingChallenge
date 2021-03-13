@@ -12,9 +12,4 @@ public class CircleArea implements Shape{
     public double getArea() {
         return circle.computeArea();
     }
-
-    @Override
-    public String getName() {
-        return CircleArea.class.getSimpleName();
-    }
 }

@@ -15,8 +15,4 @@ public class Rectangle implements Shape{
         return width * height;
     }
 
-    @Override
-    public String getName() {
-        return Rectangle.class.getSimpleName();
-    }
 }

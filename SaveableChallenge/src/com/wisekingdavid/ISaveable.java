@@ -1,2 +1,8 @@
-package com.wisekingdavid;public interface Isaveable {
+package com.wisekingdavid;
+
+import java.util.List;
+
+public interface ISaveable {
+    List<String> write();
+    void read(List<String> savedValues);
 }

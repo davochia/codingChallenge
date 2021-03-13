@@ -1,6 +1,6 @@
 package com.wisekingdavid;
 
-public class Triangle implements Shape{
+public class Triangle {
     private double base;
     private double height;
 
@@ -9,13 +9,8 @@ public class Triangle implements Shape{
         this.height = height;
     }
 
-    @Override
-    public double getArea() {
+    public double calculateArea() {
         return (base * height) / 2 ;
     }
 
-    @Override
-    public String getName() {
-        return Triangle.class.getSimpleName();
-    }
 }

@@ -1,10 +1,10 @@
 package com.wisekingdavid;
 
-public class Song {
+public class Songs {
     private String songName;
     private double songDuration;
 
-    public Song(String songName, double songDuration) {
+    public Songs(String songName, double songDuration) {
         this.songName = songName;
         this.songDuration = songDuration;
     }
@@ -17,7 +17,8 @@ public class Song {
         return songDuration;
     }
 
-    public Song createSong(String songName, double songDuration){
-        return new Song(songName, songDuration);
+    @Override
+    public String toString() {
+        return songName + " : " + songDuration + " mins";
     }
 }
